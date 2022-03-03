@@ -6,48 +6,36 @@
 </script>
 
 <h3>how to play</h3>
-<div>Guess the <strong>RANDORDLE</strong> in {ROWS} tries.</div>
-<div>Each guess must be a valid {COLS} letter word. Hit the enter button to submit.</div>
+<div>Guess the <strong>TRICKORDLE</strong> in {ROWS} tries.</div>
 <div>
-	After each guess, the color of the tiles will change to show how close your guess was to the
-	word. One tile will be randomly changed in every row.
+	One trick tile will be randomly changed in every row. 
 </div>
 <div class:complete={visible} class="examples">
-	<div><strong>Examples</strong></div>
+	<div><strong>Example (word: house)</strong></div>
 	<div class="row">
-		<Tile value="w" state="🟩" />
-		<Tile value="e" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="r" state="🔳" />
-		<Tile value="y" state="🔳" />
+		<Tile value="h" state="🟩" />
+		<Tile value="o" state="⬛" />
+		<Tile value="t" state="⬛" />
+		<Tile value="e" state="⬛" />
+		<Tile value="l" state="⬛" />
 	</div>
-	<div>The letter <strong>W</strong> is in the word and in the correct spot.</div>
+	<div>The letter <strong>O</strong> is in the correct spot, but it is grayed out because it is a trick</div>
 	<div class="row">
-		<Tile value="p" state="🔳" />
-		<Tile value="i" state="🟨" />
-		<Tile value="l" state="🔳" />
-		<Tile value="l" state="🔳" />
-		<Tile value="s" state="🔳" />
+		<Tile value="h" state="⬛" />
+		<Tile value="i" state="⬛" />
+		<Tile value="l" state="⬛" />
+		<Tile value="l" state="🟨" />
+		<Tile value="s" state="⬛" />
 	</div>
-	<div>The letter <strong>I</strong> is in the word but in the wrong spot.</div>
+	<div>The letter <strong>L</strong> is not not in the word, but it is yellow because it is a trick</div>
 	<div class="row">
-		<Tile value="v" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="g" state="🔳" />
+		<Tile value="l" state="🟩" />
+		<Tile value="a" state="⬛" />
 		<Tile value="u" state="⬛" />
-		<Tile value="e" state="🔳" />
+		<Tile value="g" state="⬛" />
+		<Tile value="h" state="🟨" />
 	</div>
-	<div>The letter <strong>U</strong> is not in the word in any spot.</div>
-</div>
-<div>
-	This is a recreation of the original <a
-		href="https://www.powerlanguage.co.uk/wordle/"
-		target="_blank">Wordle</a
-	>
-	by Josh Wardle with additional modes and features. Written with Svelte, in Typescript by
-	<a href="https://github.com/MikhaD" target="_blank">MikhaD</a>.
-	<br />
-	Open the settings menu to see some of the additional features.
+	<div>The letter <strong>L</strong> is not in in the word, but it is green because it is a trick</div>
 </div>
 
 <style lang="scss">
@@ -56,7 +44,6 @@
 	}
 	.examples {
 		border-top: 1px solid var(--border-primary);
-		border-bottom: 1px solid var(--border-primary);
 		:global(.row > *) {
 			height: 100%;
 			aspect-ratio: 1;

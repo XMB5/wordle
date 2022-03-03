@@ -8,7 +8,7 @@
 A recreation of the popular game [Wordle](https://www.powerlanguage.co.uk/wordle/) by Josh Wardle, with additional modes and features.
 Hosted on GitHub pages [here](https://mikhad.github.io/wordle/).
 
-## Randordle
+## Trickordle
 Randomly change 1 tile in every row.
 
 ## Additional Features

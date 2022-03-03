@@ -46,7 +46,7 @@
 			toaster.pop(modeData.modes[$mode].name);
 		}}
 	>
-		randordle
+		trickordle
 	</h1>
 	<div class="icons">
 		{#if showStats}
@@ -65,7 +65,7 @@
 	</div>
 	{#if tutorial}
 		<div transition:scale class="tutorial" on:click={() => dispatch("closeTutPopUp")}>
-			Tap randordle to change game mode
+			Tap trickordle to change game mode
 			<span class="ok">OK</span>
 		</div>
 	{/if}
