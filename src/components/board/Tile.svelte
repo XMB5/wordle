@@ -54,7 +54,17 @@
 		}
 	}
 	.tile {
+		/* letters stick out of the boxes if we don't lower the font size on small screens */
 		font-size: 2rem;
+		@media only screen and (max-height: 850px) {
+			font-size: 1.6rem;
+		}
+		@media only screen and (max-height: 775px) {
+			font-size: 1.4rem;
+		}
+		@media only screen and (max-height: 700px) {
+			font-size: 1.2rem;
+		}
 		font-weight: bold;
 		text-transform: uppercase;
 		position: relative;
