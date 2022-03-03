@@ -49,7 +49,7 @@
 			<Key
 				{letter}
 				on:keystroke={(e) => appendValue(e.detail)}
-				state={$letterStates[letter]}
+				state={/*$letterStates[letter]*/'🔳'}
 			/>
 		{/each}
 	</div>
@@ -58,7 +58,7 @@
 			<Key
 				{letter}
 				on:keystroke={(e) => appendValue(e.detail)}
-				state={$letterStates[letter]}
+				state={/*$letterStates[letter]*/'🔳'}
 			/>
 		{/each}
 	</div>
@@ -68,7 +68,7 @@
 			<Key
 				{letter}
 				on:keystroke={(e) => appendValue(e.detail)}
-				state={$letterStates[letter]}
+				state={/*$letterStates[letter]*/'🔳'}
 			/>
 		{/each}
 		<Key letter="" on:keystroke={backspaceValue}>
