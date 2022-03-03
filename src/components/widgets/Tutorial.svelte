@@ -6,11 +6,11 @@
 </script>
 
 <h3>how to play</h3>
-<div>Guess the <strong>WORDLE</strong> in {ROWS} tries.</div>
+<div>Guess the <strong>RANDORDLE</strong> in {ROWS} tries.</div>
 <div>Each guess must be a valid {COLS} letter word. Hit the enter button to submit.</div>
 <div>
 	After each guess, the color of the tiles will change to show how close your guess was to the
-	word.
+	word. One tile will be randomly changed in every row.
 </div>
 <div class:complete={visible} class="examples">
 	<div><strong>Examples</strong></div>

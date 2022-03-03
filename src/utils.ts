@@ -2,7 +2,7 @@ import seedrandom from "seedrandom";
 import { GameMode } from "./enums";
 import wordList from "./words_5";
 
-export const ROWS = 6;
+export const ROWS = 10;
 export const COLS = 5;
 
 export const words = {
@@ -151,6 +151,12 @@ export function getState(word: string, guess: string): LetterState[] {
 			result[i] = "🟨";
 		}
 	}
+	if (!result.every(ls => ls === '🟩')) {
+		const target = Math.floor(Math.random() * 5);
+		const options = new Set<LetterState>(['⬛', '🟩', '🟨']);
+		options.delete(result[target]);
+		result[target] = Array.from(options)[Math.floor(Math.random() * options.size)];
+	}
 	return result;
 }
 
@@ -232,10 +238,14 @@ export const DELAY_INCREMENT = 200;
 
 export const PRAISE = [
 	"Genius",
+	"Superlative",
 	"Magnificent",
 	"Impressive",
 	"Splendid",
+	"Solid",
 	"Great",
+	"Nice",
+	"Good",
 	"Phew",
 ];
 
