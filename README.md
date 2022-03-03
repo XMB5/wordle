@@ -8,6 +8,9 @@
 A recreation of the popular game [Wordle](https://www.powerlanguage.co.uk/wordle/) by Josh Wardle, with additional modes and features.
 Hosted on GitHub pages [here](https://mikhad.github.io/wordle/).
 
+## Randordle
+Randomly change 1 tile in every row.
+
 ## Additional Features
 - Words are chosen from the list of words at random instead of in sequence, and the solution is not stored in localStorage, making it harder to cheat. The seed for the random number is created from the date, ensuring that everyone gets the same random number, so people can still compare answers.
 - When you complete a game the definition of the word is shown on the end of game modal.
