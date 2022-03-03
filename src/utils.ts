@@ -284,6 +284,10 @@ export function createDefaultStats(mode: GameMode): Stats {
 			4: 0,
 			5: 0,
 			6: 0,
+			7: 0,
+			8: 0,
+			9: 0,
+			10: 0,
 		}
 	};
 	if (!modeData.modes[mode].streak) return stats;
