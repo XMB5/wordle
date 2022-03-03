@@ -18,12 +18,12 @@
 		return false;
 	}
 
-	$: stats = `${modeData.modes[$mode].name} Wordle+ #${state.wordNumber} ${
+	$: stats = `${modeData.modes[$mode].name} Randordle #${state.wordNumber} ${
 		!state.active && failed() ? state.guesses : "X"
 	}/${state.board.words.length}\n\n    ${state.board.state
 		.slice(0, state.guesses)
 		.map((r) => r.join(""))
-		.join("\n    ")}\nmikhad.github.io/wordle`;
+		.join("\n    ")}\nxmb5.github.io/wordle/public`;
 </script>
 
 <div
