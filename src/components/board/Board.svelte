@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { getRowData, words } from "../../utils";
-
 	import Row from "./Row.svelte";
 	import ContextMenu from "../widgets/ContextMenu.svelte";
 	import { createEventDispatcher } from "svelte";
@@ -24,28 +22,22 @@
 
 	let rows: Row[] = [];
 	let showCtx = false;
-	let pAns = 0;
-	let pSols = 0;
 	let x = 0;
 	let y = 0;
 	let word = "";
 
 	function context(cx: number, cy: number, num: number, val: string) {
-		if (guesses >= num) {
+		if (guesses > num) {
 			x = cx;
 			y = cy;
 			showCtx = true;
-			word = guesses > num ? val : "";
-
-			const match = getRowData(num, board);
-			pAns = words.words.filter((w) => match(w)).length;
-			pSols = pAns + words.valid.filter((w) => match(w)).length;
+			word = val;
 		}
 	}
 </script>
 
 {#if showCtx}
-	<ContextMenu {pAns} {pSols} {x} {y} {word} />
+	<ContextMenu {x} {y} {word} />
 {/if}
 
 <div class="board">
@@ -66,8 +58,7 @@
 	{/if}
 	{#if tutorial}
 		<div transition:scale class="tutorial" on:click={() => dispatch("closeTutPopUp")}>
-			double tap (right click) a row to see a word's definition, or how many words could be
-			played there
+			double tap (right click) a row to see a word's definition
 			<span class="ok">OK</span>
 		</div>
 	{/if}
