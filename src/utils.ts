@@ -239,6 +239,8 @@ export const DELAY_INCREMENT = 200;
 export const PRAISE = [
 	"Genius",
 	"Superlative",
+	"Excellent",
+	"Marvelous",
 	"Magnificent",
 	"Impressive",
 	"Splendid",
