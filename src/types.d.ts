@@ -90,6 +90,8 @@ type Guesses = {
 	"8": number;
 	"9": number;
 	"10": number;
+	"11": number;
+	"12": number;
 	"fail": number;
 };
 

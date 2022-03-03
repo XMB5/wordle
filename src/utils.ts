@@ -2,7 +2,7 @@ import seedrandom from "seedrandom";
 import { GameMode } from "./enums";
 import wordList from "./words_5";
 
-export const ROWS = 10;
+export const ROWS = 12;
 export const COLS = 5;
 
 export const words = {
@@ -288,6 +288,8 @@ export function createDefaultStats(mode: GameMode): Stats {
 			8: 0,
 			9: 0,
 			10: 0,
+			11: 0,
+			12: 0,
 		}
 	};
 	if (!modeData.modes[mode].streak) return stats;
