@@ -23,7 +23,7 @@
 	}/${state.board.words.length}\n\n    ${state.board.state
 		.slice(0, state.guesses)
 		.map((r) => r.join(""))
-		.join("\n    ")}\nxmb5.github.io/wordle/public`;
+		.join("\n    ")}\nxmb5.github.io/wordle`;
 </script>
 
 <div
