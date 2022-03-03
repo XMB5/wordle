@@ -21,19 +21,19 @@
 	</div>
 	<div>The letter <strong>O</strong> is in the correct spot, but it is grayed out because it is a trick</div>
 	<div class="row">
-		<Tile value="h" state="⬛" />
-		<Tile value="i" state="⬛" />
-		<Tile value="l" state="⬛" />
-		<Tile value="l" state="🟨" />
-		<Tile value="s" state="⬛" />
+		<Tile value="p" state="⬛" />
+		<Tile value="a" state="⬛" />
+		<Tile value="r" state="⬛" />
+		<Tile value="k" state="🟨" />
+		<Tile value="a" state="⬛" />
 	</div>
-	<div>The letter <strong>L</strong> is not not in the word, but it is yellow because it is a trick</div>
+	<div>The letter <strong>K</strong> is not not in the word, but it is yellow because it is a trick</div>
 	<div class="row">
+		<Tile value="g" state="⬛" />
 		<Tile value="l" state="🟩" />
 		<Tile value="a" state="⬛" />
-		<Tile value="u" state="⬛" />
-		<Tile value="g" state="⬛" />
-		<Tile value="h" state="🟨" />
+		<Tile value="z" state="⬛" />
+		<Tile value="e" state="🟨" />
 	</div>
 	<div>The letter <strong>L</strong> is not in in the word, but it is green because it is a trick</div>
 </div>
