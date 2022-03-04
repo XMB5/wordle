@@ -44,7 +44,7 @@
 		localStorage.setItem("mode", `${m}`);
 		window.location.hash = GameMode[m];
 		stats = (JSON.parse(localStorage.getItem(`stats-${m}`)) as Stats) || createDefaultStats(m);
-		word = words.words[seededRandomInt(0, words.words.length, modeData.modes[m].seed)];
+		word = words.words[seededRandomInt(0, words.words.length, modeData.modes[m].seed + 2069599171)];  // add random number to make words unique from original wordle+
 		let temp: GameState;
 		if (modeData.modes[m].historical === true) {
 			temp = JSON.parse(localStorage.getItem(`state-${m}-h`));
