@@ -98,6 +98,7 @@ import { GameMode } from "../enums";
 	h1 {
 		position: absolute;
 		width: 100%;
+		font-family: 'Clear Sans';
 		font-size: var(--fs-medium-large);
 		cursor: pointer;
 		text-align: center;
