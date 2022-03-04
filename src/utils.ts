@@ -179,17 +179,19 @@ export function contractNum(n: number) {
 
 export const keys = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
 
+const seedOffset = 2069599171;  // random value to make seed different from original wordle+
+
 export function newSeed(mode: GameMode) {
 	const today = new Date();
 	switch (mode) {
 		case GameMode.daily:
-			return new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate())).valueOf();
+			return new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate())).valueOf() + seedOffset;
 		case GameMode.hourly:
-			return new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours()).valueOf();
+			return new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours()).valueOf() + seedOffset;
 		// case GameMode.minutely:
-		// 	return new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes()).valueOf();
+		// 	return new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes()).valueOf() + seedOffset;
 		case GameMode.infinite:
-			return new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds()).valueOf();
+			return new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds()).valueOf() + seedOffset;
 	}
 }
 
