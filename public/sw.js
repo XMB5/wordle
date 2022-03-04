@@ -1,6 +1,6 @@
 //! IF ANYTHING IN THIS FILE IS CHANGED MAKE SURE setVersion.js HAS ALSO BEEN UPDATED
 // Increase the v number when the app is updated
-const cacheName = "wordle+-v1.3.1";
+const cacheName = "v1.3.2";
 
 const assetsToCache = [
 	"./",
@@ -49,5 +49,5 @@ self.addEventListener("activate", e => {
  * @param {string} text - The text to log
  */
 function log(text) {
-	console.log("%cService Worker", "color: purple; font-weight: 600; background: white; padding: 0 5px; border-radius: 2px", text);
+	console.log("%cService Worker [" + cacheName + "]", "color: purple; font-weight: 600; background: white; padding: 0 5px; border-radius: 2px", text);
 }
