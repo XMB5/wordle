@@ -138,10 +138,12 @@ function countOccurences<T>(arr: T[], val: T) {
 export function getState(word: string, guess: string): LetterState[] {
 	const charArr = word.split("");
 	const result = Array<LetterState>(5).fill("⬛");
+	let numGreens = 0;
 	for (let i = 0; i < word.length; ++i) {
 		if (charArr[i] === guess.charAt(i)) {
 			result[i] = "🟩";
 			charArr[i] = "$";
+			numGreens++;
 		}
 	}
 	for (let i = 0; i < word.length; ++i) {
@@ -151,10 +153,16 @@ export function getState(word: string, guess: string): LetterState[] {
 			result[i] = "🟨";
 		}
 	}
-	if (!result.every(ls => ls === '🟩')) {
-		const target = Math.floor(Math.random() * 5);
+
+	if (numGreens !== COLS) {
+		let target = Math.floor(Math.random() * 5);
 		const options = new Set<LetterState>(['⬛', '🟩', '🟨']);
 		options.delete(result[target]);
+		if (numGreens === COLS - 1 && result[target] !== '🟩') {
+			// we have all greens, except for the tile we are about to change
+			// we don't want to set this tile to green, because then the output would be all green, but it's not the correct word
+			options.delete('🟩');
+		}
 		result[target] = Array.from(options)[Math.floor(Math.random() * options.size)];
 	}
 	return result;
