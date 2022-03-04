@@ -33,7 +33,7 @@
 		<Tile value="l" state="🟩" />
 		<Tile value="a" state="⬛" />
 		<Tile value="z" state="⬛" />
-		<Tile value="e" state="🟨" />
+		<Tile value="e" state="🟩" />
 	</div>
 	<div>The letter <strong>L</strong> is not in in the word, but it is green because it is a trick</div>
 </div>
