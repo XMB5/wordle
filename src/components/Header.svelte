@@ -81,7 +81,7 @@ import { GameMode } from "../enums";
 		position: relative;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.15rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -98,7 +98,7 @@ import { GameMode } from "../enums";
 	h1 {
 		position: absolute;
 		width: 100%;
-		font-size: var(--fs-large);
+		font-size: var(--fs-medium-large);
 		cursor: pointer;
 		text-align: center;
 	}
