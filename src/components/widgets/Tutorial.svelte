@@ -27,7 +27,7 @@
 		<Tile value="k" state="🟨" />
 		<Tile value="a" state="⬛" />
 	</div>
-	<div>The letter <strong>K</strong> is not not in the word, but it is yellow because it is a trick</div>
+	<div>The letter <strong>K</strong> is not in the word, but it is yellow because it is a trick</div>
 	<div class="row">
 		<Tile value="g" state="⬛" />
 		<Tile value="l" state="🟩" />
@@ -35,7 +35,7 @@
 		<Tile value="z" state="⬛" />
 		<Tile value="e" state="🟩" />
 	</div>
-	<div>The letter <strong>L</strong> is not in in the word, but it is green because it is a trick</div>
+	<div>The letter <strong>L</strong> is not in the word, but it is green because it is a trick</div>
 </div>
 
 <style lang="scss">
