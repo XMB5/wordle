@@ -5,8 +5,10 @@ const cacheName = "wordle+-v1.3.1";
 const assetsToCache = [
 	"./",
 	"./index.html",
+	"./global.css",
 	"./build/bundle.css",
-	"./build/bundle.js"
+	"./build/bundle.js",
+	"./fonts/ClearSans-Regular.woff2"
 ];
 
 self.addEventListener("install", e => {
