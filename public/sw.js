@@ -1,6 +1,6 @@
 //! IF ANYTHING IN THIS FILE IS CHANGED MAKE SURE setVersion.js HAS ALSO BEEN UPDATED
 // Increase the v number when the app is updated
-const cacheName = "wordle-v1.3.3";  // add "wordle-"" prefix because cache storage is shared by all xmb5.github.io pages
+const cacheName = "wordle-v1.3.4";  // add "wordle-"" prefix because cache storage is shared by all xmb5.github.io pages
 
 const assetsToCache = [
 	"./",
