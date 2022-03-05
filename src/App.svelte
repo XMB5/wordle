@@ -69,8 +69,9 @@
 		const letters = createLetterStates();
 		for (let row = 0; row < ROWS; ++row) {
 			for (let col = 0; col < state.board.words[row].length; ++col) {
-				if (state.board.state[row][col] !== "🔳") {
-					letters[state.board.words[row][col]] = '⬛';
+				const tileColor = state.board.state[row][col];
+				if (tileColor !== "🔳") {
+					letters[state.board.words[row][col]] = tileColor;
 				}
 			}
 		}

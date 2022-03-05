@@ -82,9 +82,9 @@
 			}
 			const state = getState(word, game.board.words[game.guesses]);
 			game.board.state[game.guesses] = state;
-			for (let char of game.board.words[game.guesses]) {
-				$letterStates[char] = '⬛';
-			}
+			state.forEach((charState, i) => {
+				$letterStates[game.board.words[game.guesses][i]] = charState;
+			});
 			++game.guesses;
 			if (game.board.words[game.guesses - 1] === word) win();
 			else if (game.guesses === ROWS) lose();
