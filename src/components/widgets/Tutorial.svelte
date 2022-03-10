@@ -16,18 +16,18 @@
 		<Tile value="h" state="🟩" />
 		<Tile value="o" state="⬛" />
 		<Tile value="t" state="⬛" />
-		<Tile value="e" state="⬛" />
+		<Tile value="e" state="🟨" />
 		<Tile value="l" state="⬛" />
 	</div>
 	<div>The letter <strong>O</strong> is in the correct spot, but it is grayed out because it is a trick</div>
 	<div class="row">
 		<Tile value="p" state="⬛" />
 		<Tile value="a" state="⬛" />
-		<Tile value="r" state="⬛" />
-		<Tile value="k" state="🟨" />
+		<Tile value="r" state="🟨" />
+		<Tile value="k" state="⬛" />
 		<Tile value="a" state="⬛" />
 	</div>
-	<div>The letter <strong>K</strong> is not in the word, but it is yellow because it is a trick</div>
+	<div>The letter <strong>R</strong> is not in the word, but it is yellow because it is a trick</div>
 	<div class="row">
 		<Tile value="g" state="⬛" />
 		<Tile value="l" state="🟩" />
